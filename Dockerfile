@@ -1,4 +1,5 @@
-FROM alpine
+ARG ARCH=
+FROM ${ARCH}alpine
 RUN addgroup -S app && adduser -S -G app app
 ADD random.sh /random.sh
 ADD netcat.sh /netcat.sh
